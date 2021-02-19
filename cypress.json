@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://www.apple.com/",
+    "chromeWebSecurity": false,
+    "viewportHeight": 768,
+    "viewportWidth": 1024,
+    "testFiles": "**/*.{feature,features}",
+    "pageLoadTimeout": 20000,
+    "execTimeout": 7000,
+    "requestTimeout":7000,
+    "responseTimeout": 7000,
+    "waitForAnimations": true
+}
