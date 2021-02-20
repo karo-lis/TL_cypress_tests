@@ -1,6 +1,5 @@
 {
     "baseUrl": "https://www.apple.com/",
-    "chromeWebSecurity": false,
     "viewportHeight": 768,
     "viewportWidth": 1024,
     "testFiles": "**/*.{feature,features}",
