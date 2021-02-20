@@ -35,13 +35,6 @@ Feature: Navigation bar
     Then I am redirected to the 'iMac Pro' page
     And I can see 'iMac Pro' text displayed
 
-  Scenario: I can navigate to Mac Pro page
-    Given I am on the main page
-    When I click Mac button
-    And I click 'Mac Pro' button
-    Then I am redirected to the 'Mac Pro' page
-    And I can see 'Mac&nbspPro' text displayed
-
   Scenario: I can navigate to Mac mini page
     Given I am on the main page
     When I click Mac button

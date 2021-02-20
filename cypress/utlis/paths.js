@@ -6,7 +6,6 @@ const paths = {
  macBookPro13: '/macbook-pro-13/',
  iMac: '/imac/', 
  iMacPro: '/imac-pro/',
- macPro: '/mac-pro/',
  macMini: '/mac-mini/',
 }
 

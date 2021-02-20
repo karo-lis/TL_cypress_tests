@@ -20,7 +20,7 @@ module.exports = {
         macBookPro13: '[href="/macbook-pro-13/"]',
         iMac: '[href="/imac/"]', 
         iMacPro: '[href="/imac-pro/"]',
-        macPro: '[href="/mac-pro/"]',
+        macPro: '.icon-copy',
         macMini: '[href="/mac-mini/"]',
     }
 

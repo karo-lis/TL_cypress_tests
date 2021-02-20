@@ -8,7 +8,6 @@ const computers = {
   'MacBook Pro 13': mac.macBookPro13,
   'iMac': mac.iMac,
   'iMac Pro': mac.iMacPro,
-  'Mac Pro': mac.macPro,
   'Mac mini': mac.macMini,
 };
 
@@ -18,7 +17,6 @@ const pages = {
   'MacBook Pro 13': paths.macBookPro13,
   'iMac': paths.iMac,
   'iMac Pro': paths.iMacPro,
-  'Mac Pro': paths.macPro,
   'Mac mini': paths.macMini,
 };
 
@@ -28,7 +26,6 @@ const pageTitles = {
   'MacBook Pro 13': titles.macBookPro13,
   'iMac': titles.iMac,
   'iMac Pro': titles.iMacPro,
-  'Mac Pro': titles.macPro,
   'Mac mini': titles.macMini,
 };
 
