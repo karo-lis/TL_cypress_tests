@@ -1,5 +1,5 @@
 import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps';
-import { home, mac } from '../../utlis/locators';
+import { home, mac, pageTitles as titles } from '../../utlis/locators';
 import { paths } from '../../utlis/paths';
 
 const computers = {
@@ -22,6 +22,16 @@ const pages = {
   'Mac mini': paths.macMini,
 };
 
+const pageTitles = {
+  'MacBook Pro 16': titles.macBookPro16,
+  'MacBook Air': titles.macBookAir,
+  'MacBook Pro 13': titles.macBookPro13,
+  'iMac': titles.iMac,
+  'iMac Pro': titles.iMacPro,
+  'Mac Pro': titles.macPro,
+  'Mac mini': titles.macMini,
+};
+
 Given('I am on the main page', () => {
     cy.visit('/')
     cy.url().should('equal', paths.homePage)
@@ -40,4 +50,8 @@ And('I click {string} button', (name) => {
 
 Then('I am redirected to the {string} page', (url) => {
   cy.url().should('include', pages[url])
+})
+
+And('I can see {string} text displayed', (title) => {
+   cy.get(pageTitles[title]).invoke('text').should('include', title)
 })
