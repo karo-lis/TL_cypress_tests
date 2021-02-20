@@ -7,5 +7,6 @@
     "execTimeout": 7000,
     "requestTimeout":7000,
     "responseTimeout": 7000,
+    "defaultCommandTimeout": 7000,
     "waitForAnimations": true
 }
