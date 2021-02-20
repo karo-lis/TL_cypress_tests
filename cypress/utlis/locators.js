@@ -15,7 +15,7 @@ module.exports = {
     },
 
     pageTitles: {
-        macBookPro16title: 'MacBook Air',
+        macBookPro16: '[href="/macbook-pro-16/"]',
         macBookAir: '[href="/macbook-air/"]',
         macBookPro13: '[href="/macbook-pro-13/"]',
         iMac: '[href="/imac/"]', 
@@ -23,4 +23,6 @@ module.exports = {
         macPro: '[href="/mac-pro/"]',
         macMini: '[href="/mac-mini/"]',
     }
+
+
 }
