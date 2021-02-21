@@ -3,30 +3,36 @@ import { home, mac, pageTitles as titles } from '../../utlis/locators';
 import { paths } from '../../utlis/paths';
 
 const computers = {
-  'MacBook Pro 16': mac.macBookPro16,
-  'MacBook Air': mac.macBookAir,
-  'MacBook Pro 13': mac.macBookPro13,
-  'iMac': mac.iMac,
-  'iMac Pro': mac.iMacPro,
-  'Mac mini': mac.macMini,
-};
-
-const pages = {
-  'MacBook Pro 16': paths.macBookPro16,
-  'MacBook Air': paths.macBookAir,
-  'MacBook Pro 13': paths.macBookPro13,
-  'iMac': paths.iMac,
-  'iMac Pro': paths.iMacPro,
-  'Mac mini': paths.macMini,
-};
-
-const pageTitles = {
-  'MacBook Pro 16': titles.macBookPro16,
-  'MacBook Air': titles.macBookAir,
-  'MacBook Pro 13': titles.macBookPro13,
-  'iMac': titles.iMac,
-  'iMac Pro': titles.iMacPro,
-  'Mac mini': titles.macMini,
+  'MacBook Pro 16': {
+    type: mac.macBookPro16,
+    page: paths.macBookPro16,
+    pageTitle: titles.macBookPro16,
+  },
+  'MacBook Air': {
+    type: mac.macBookAir,
+    page: paths.macBookAir,
+    pageTitle: titles.macBookAir
+  },
+  'MacBook Pro 13': {
+    type: mac.macBookPro13,
+    page: paths.macBookPro13,
+    pageTitle: titles.macBookPro13,
+  },
+  'iMac': {
+    type: mac.iMac,
+    page: paths.iMac,
+    pageTitle: titles.iMac,
+  },
+  'iMac Pro': {
+    type: mac.iMacPro,
+    page: paths.iMacPro,
+    pageTitle: titles.iMacPro,
+  },
+  'Mac mini': {
+    type: mac.macMini,
+    page: paths.macMini,
+    pageTitle: titles.macMini,
+  }
 };
 
 Given('I am on the main page', () => {
@@ -42,13 +48,13 @@ When('I click Mac button', () => {
 })
 
 And('I click {string} button', (name) => {
-  cy.get(computers[name]).click()
+  cy.get(computers[name].type).click()
 })
 
 Then('I am redirected to the {string} page', (url) => {
-  cy.url().should('include', pages[url])
+  cy.url().should('include', computers[url].page)
 })
 
 And('I can see {string} text displayed', (title) => {
-   cy.get(pageTitles[title]).invoke('text').should('include', title)
+   cy.get(computers[title].pageTitle).invoke('text').should('include', title)
 })
