@@ -1,7 +1,6 @@
 module.exports = {
     home: {
       macButton: '[href="/mac/"] .ac-gn-link-text',
-      searchButton: '#ac-gn-link-search',
     },
 
     mac: {
@@ -22,7 +21,5 @@ module.exports = {
         iMacPro: '[href="/imac-pro/"]',
         macPro: '.icon-copy',
         macMini: '[href="/mac-mini/"]',
-    }
-
-
+    },
 }
